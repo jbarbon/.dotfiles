@@ -1,0 +1,25 @@
+#!/bin/bash
+
+function get_battery_percentage() {
+    # This function returns the percentage of battery of a specific device from the upower --dump command
+
+    # Check if device name is provided
+    if [ -z "$1" ]; then
+        echo "Error: Device name not provided"
+        return 1
+    fi
+
+    # Get the battery percentage of the device
+    percentage=$(upower -i "$1" | grep percentage | awk '{print $2}')
+
+    # Check if percentage is not empty
+    if [ -z "$percentage" ]; then
+        echo "Error: Device not found or percentage not available"
+        return 1
+    fi
+
+    # Return the battery percentage
+    echo "$percentage"
+}
+
+get_battery_percentage $1

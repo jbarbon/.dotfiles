@@ -5,3 +5,6 @@ sudo systemctl enable bluetooth # to enable per default, will run after every bo
 
 sudo pacman -S --needed bluez bluez-utils
 sudo pacman -S blueman
+
+# Battery Config
+search_string=

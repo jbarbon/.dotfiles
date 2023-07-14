@@ -1,0 +1,4 @@
+#!/bin/bash
+
+id="/org/freedesktop/UPower/devices/headphones_dev_FC_E8_06_D2_42_AC"
+upower -i $id | grep percentage | awk '{print $2}'

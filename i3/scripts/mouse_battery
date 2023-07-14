@@ -1,0 +1,4 @@
+#!/bin/bash
+
+id="/org/freedesktop/UPower/devices/battery_hidpp_battery_0"
+upower -i $id | grep percentage | awk '{print $2}'

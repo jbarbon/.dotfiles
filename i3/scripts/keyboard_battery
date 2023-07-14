@@ -1,0 +1,4 @@
+#!/bin/bash
+
+id="/org/freedesktop/UPower/devices/keyboard_dev_EB_8A_49_7B_67_3E"
+upower -i $id | grep percentage | awk '{print $2}'
