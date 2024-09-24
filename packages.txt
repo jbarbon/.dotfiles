@@ -18,4 +18,12 @@ flatpak
 flameshot
 docker
 clamav
-
+xclip 
+lazygit 
+rg 
+nvm 
+luarocks 
+tmux 
+pip 
+awl 
+perl
